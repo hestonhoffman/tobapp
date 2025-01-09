@@ -160,11 +160,18 @@ function getSelectValue(element: HTMLSelectElement): string {
 function populateRoundG(): void {
   let playIn = document.getElementById("play-in") as HTMLSelectElement;
   let roundG = document.getElementById("G") as HTMLSelectElement;
-
   playIn.addEventListener("change", function () {
-    const optionElement = document.createElement("option");
-    optionElement.text = getSelectValue(playIn);
-    roundG.append(optionElement);
+    let playInWinner = document.getElementById(
+      "play-in-winner"
+    ) as HTMLOptionElement;
+    if (playInWinner) {
+      playInWinner.text = getSelectValue(playIn);
+    } else {
+      const optionElement = document.createElement("option");
+      optionElement.text = getSelectValue(playIn);
+      optionElement.setAttribute("id", "play-in-winner");
+      roundG.append(optionElement);
+    }
   });
 }
 
