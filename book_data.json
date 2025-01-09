@@ -1,0 +1,94 @@
+{
+    "books": [
+      {
+        "title": "Blackouts",
+        "author": "Justin Torres",
+        "round": "A"
+      },
+      {
+        "title": "Boys Weekend",
+        "author": "Mattie Lubchansky",
+        "round": "A"
+      },
+      {
+        "title": "Dayswork",
+        "author": "Jennifer Habel and Chris Bachelder",
+        "round": "B"
+      },
+      {
+        "title": "The Shamshine Blind",
+        "author": "Paz Pardo",
+        "round": "E"
+      },
+      {
+        "title": "Brainwyrms",
+        "author": "Alison Rumfitt",
+        "round": "F"
+      },
+      {
+        "title": "Chain-Gang All-Stars",
+        "author": "Nana Kwame Adjei-Brenyah",
+        "round": "F"
+      },
+      {
+        "title": "Cold People",
+        "author": "Tom Rob Smith",
+        "round": "B"
+      },
+      {
+        "title": "The Librarianist",
+        "author": "Patrick deWitt",
+        "round": "play-in"
+      },
+      {
+        "title": "The Heaven & Earth Grocery Store",
+        "author": "James McBride",
+        "round": "C"
+      },
+      {
+        "title": "Open Throat",
+        "author": "Henry Hoke",
+        "round": "C"
+      },
+      {
+        "title": "What You Are Looking for Is in the Library",
+        "author": "Michiko Aoyama",
+        "round": "G"
+      },
+      {
+        "title": "The Lost Journals of Sacajewea ",
+        "author": "Debra Magpie Earling",
+        "round": "D"
+      },
+      {
+        "title": "The Bee Sting",
+        "author": "Paul Murray",
+        "round": "play-in"
+      },
+      {
+        "title": "Monstrilio",
+        "author": "Gerardo Sámano Córdova",
+        "round": "H"
+      },
+      {
+        "title": "The Auburn Conference",
+        "author": "Tom Piazza",
+        "round": "play-in"
+      },
+      {
+        "title": "Big Swiss",
+        "author": "Jen Beagin",
+        "round": "D"
+      },
+      {
+        "title": "American Mermaid",
+        "author": "Julia Langbein",
+        "round": "H"
+      },
+      {
+        "title": "The Guest",
+        "author": "Emma Cline",
+        "round": "E"
+      }
+    ]
+}
