@@ -93,8 +93,6 @@ const bookData = [
         round: "E",
     },
 ];
-// I used a class cos I was trying to do some fancy InstanceOf checking.
-// I eventually abandoned that effort, so I guess this could be a regular type instead
 class Book {
     constructor(title, author, round) {
         this.title = title;
@@ -112,37 +110,37 @@ books.forEach((book) => {
 });
 // Adding play-in after I've assembled the array cos I want it to sit at the top
 rounds.sort().unshift("play-in");
-function createSelect(id) {
-    let dropDownElement = document.createElement("select");
-    dropDownElement.setAttribute("id", id);
-    let disabledOption = document.createElement("option");
-    disabledOption.text = "Select a winner";
-    disabledOption.disabled = true;
-    disabledOption.selected = true;
-    dropDownElement.append(disabledOption);
-    return dropDownElement;
+// Template literal for selectors
+function buildSelector(id) {
+    let selectorHtml = `<select id="${id}">
+        <option disabled selected>Select a winner</option>
+      </select>`;
+    return selectorHtml;
+}
+// helper function to get the value of the selected option
+function getSelectValue(element) {
+    let sel = element.selectedIndex;
+    let opt = element.options[sel];
+    return opt.value;
 }
 function createFirstRounds() {
     rounds.forEach((round) => {
         let dropDownDiv = document.createElement("div");
         dropDownDiv.setAttribute("id", `match-${round}`);
-        let dropDownElement = createSelect(round);
+        dropDownDiv.innerHTML = buildSelector(round);
         const tobContainer = document.getElementById("first-round");
         books.forEach((book) => {
             if (book.round === round) {
                 const optionElement = document.createElement("option");
                 optionElement.text = book.title;
-                dropDownElement.append(optionElement);
+                const selector = dropDownDiv.firstElementChild;
+                if (selector) {
+                    selector.appendChild(optionElement);
+                }
             }
         });
-        dropDownDiv.appendChild(dropDownElement);
         tobContainer.appendChild(dropDownDiv);
     });
-}
-function getSelectValue(element) {
-    let sel = element.selectedIndex;
-    let opt = element.options[sel];
-    return opt.value;
 }
 // After the user selects a play-in winner, the winner needs to be added to the options for round
 function populateRoundG() {
